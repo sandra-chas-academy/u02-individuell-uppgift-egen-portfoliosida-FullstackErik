@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style: none;
     color: white;
+    font-family: "Red Hat Display";
 }
 /* utility-container for flexible design */
 .container {
@@ -12,6 +15,7 @@
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    /* border för att underlätta design, ta bort sen */
     border: 1px solid red;
 }
 
@@ -19,33 +23,24 @@ body {
     background-color: rgb(25, 25, 39);
 }
 
-.navbar {
-    display: none;
+#navbar {
+    padding: 1rem 0.5rem;
 }
 
-#header {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#mobile-nav {
-    margin-top: 0.5rem;
+#hamburger {
     width: 45px;
     height: auto;
+    position: relative;
+    left: 90%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.nav-list { 
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    gap: 0.2rem;
+}
 
 
 
@@ -76,17 +71,36 @@ body {
     .container {
     max-width: 768px;
     }
+    #hamburger {
+        display: none;
+    }
+    .nav-list { 
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        font-size: 2rem;
+        gap: 1rem;
+        padding-right: 0.5rem;
+    }
 }
   /* lg */
 @media (min-width: 1024px) {
     .container {
     max-width: 1024px;
     }
+    .nav-list {
+        gap: 2rem;
+        font-size: 2.2rem;
+        padding-right: 1rem;
+    }
 }
   /* xl */
 @media (min-width: 1280px) {
     .container {
     max-width: 1280px;
+    }
+    .nav-list {
+        gap: 3rem;
     }
 }
   /* 2xl */
