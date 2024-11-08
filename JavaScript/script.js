@@ -7,6 +7,7 @@ const mobileMediaQuery = window.matchMedia("(max-width: 768px)");
 handleResize();
 mobileMediaQuery.addEventListener("change", handleResize);
 
+//function so nav bar doesnt break upon resizing window
 function handleResize() {
 
     if (mobileMediaQuery.matches) {
@@ -27,6 +28,7 @@ function showNav() {
 
     dropDownList.style.display = "flex";
     hamburger.style.display = "none";
+    
 
     setTimeout(() => {
         body.addEventListener("click", closeNav);
@@ -37,7 +39,6 @@ function showNav() {
 //function to close mobile navbar
 function closeNav(e) {
 
-    console.log("closeNav körs");
     if (e.target.className === "list-item") {
         console.log("detta ska vara en länk");
     }
@@ -45,6 +46,5 @@ function closeNav(e) {
     dropDownList.style.display = "none";
     hamburger.style.display = "block";
     body.removeEventListener("click", closeNav);
-
 }
 
