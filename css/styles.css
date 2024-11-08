@@ -14,10 +14,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0.5rem;
-    /* padding-left: 0.5rem;
-    padding-right: 0.5rem; */
     /* border för att underlätta design, ta bort sen */
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 body {
@@ -35,18 +33,40 @@ body {
     left: 90%;
 }
 
+#navbar a:hover {
+    background-color: aqua;
+}
+
+.nav-list-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    z-index: 1;
+    background-color: rgba(8, 199, 56, 0.884);
+}
+
+.list-item-mobile {
+    width: 100%;
+}
+
+.list-item-mobile a{
+    text-decoration: none;
+    font-size: 2rem;
+    width: 100%;
+    padding-left: 0.5rem;
+}
+
 .nav-list { 
     display: none;
     flex-direction: column;
     align-items: center;
     font-size: 2rem;
     gap: 0.2rem;
-    /* background-color: brown; */
 }
 
-.list-item {
-    /* background-color: rgba(23, 23, 170, 0.8); */
-}
 .list-item a {
     text-decoration: none;
 }
@@ -111,6 +131,9 @@ body {
         font-size: 2rem;
         gap: 1rem;
         padding-right: 0.5rem;
+    }
+    .nav-list-mobile {
+        display: none;
     }
 }
   /* lg */

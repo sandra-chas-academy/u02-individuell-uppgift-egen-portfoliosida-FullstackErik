@@ -1,4 +1,4 @@
-const dropDownList = document.querySelector(".nav-list");
+const dropDownList = document.querySelector(".nav-list-mobile");
 const hamburger = document.querySelector("#hamburger");
 const navbar = document.querySelector("#navbar");
 const body = document.querySelector(".body");
@@ -10,12 +10,12 @@ mobileMediaQuery.addEventListener("change", handleResize);
 //function so nav bar doesnt break upon resizing window
 function handleResize() {
 
+    dropDownList.style.display = "none";
+
     if (mobileMediaQuery.matches) {
-        dropDownList.style.display = "none";
         hamburger.style.display = "block";
         hamburger.addEventListener("click", showNav);
     } else {
-        dropDownList.style.display = "flex";
         hamburger.style.display = "none";
         hamburger.removeEventListener("click", showNav);
         body.removeEventListener("click", closeNav);
@@ -26,9 +26,8 @@ function handleResize() {
 //function to open mobile navbar
 function showNav() {
 
-    dropDownList.style.display = "flex";
-    hamburger.style.display = "none";
-    
+    dropDownList.style.display = "block";
+    hamburger.style.visibility = "hidden";
 
     setTimeout(() => {
         body.addEventListener("click", closeNav);
@@ -44,7 +43,7 @@ function closeNav(e) {
     }
 
     dropDownList.style.display = "none";
-    hamburger.style.display = "block";
+    hamburger.style.visibility = "visible";
     body.removeEventListener("click", closeNav);
 }
 
