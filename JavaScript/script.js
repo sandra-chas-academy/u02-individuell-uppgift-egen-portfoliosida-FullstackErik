@@ -1,7 +1,7 @@
 const dropDownList = document.querySelector(".nav-list-mobile");
 const hamburger = document.querySelector("#hamburger");
 const navbar = document.querySelector("#navbar");
-const body = document.querySelector(".body");
+const body = document.querySelector("body");
 const mobileMediaQuery = window.matchMedia("(max-width: 768px)");
 
 handleResize();
@@ -19,6 +19,7 @@ function handleResize() {
         hamburger.style.display = "none";
         hamburger.removeEventListener("click", showNav);
         body.removeEventListener("click", closeNav);
+        closeNav();
     }
 
 }
@@ -37,10 +38,6 @@ function showNav() {
 
 //function to close mobile navbar
 function closeNav(e) {
-
-    if (e.target.className === "list-item") {
-        console.log("detta ska vara en länk");
-    }
 
     dropDownList.style.display = "none";
     hamburger.style.visibility = "visible";

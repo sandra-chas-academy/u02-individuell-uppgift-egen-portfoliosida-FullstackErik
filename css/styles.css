@@ -13,9 +13,9 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
     /* border för att underlätta design, ta bort sen */
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 body {
@@ -70,13 +70,14 @@ body {
 .list-item a {
     text-decoration: none;
 }
-#intro {
+
+.intro {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.profilePic {
+.profile-Pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -84,7 +85,7 @@ body {
 }
 
 .intro-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-align: center;
     color: aquamarine;
     font-weight: 800;
@@ -95,6 +96,13 @@ body {
     font-family: "bebas neue";
 }
 
+.intro-text {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
 
 
 
@@ -115,6 +123,17 @@ body {
     #hamburger {
         left: 93%;
     }
+    .profile-Pic {
+        width: 200px;
+        height: 200px;
+    }
+    .intro-title {
+        font-size: 4rem;
+    }
+    .intro-text {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
 }
   /* md */
 @media (min-width: 768px) {
@@ -134,6 +153,18 @@ body {
     }
     .nav-list-mobile {
         display: none;
+    }
+    .profile-Pic {
+        width: 250px;
+        height: 250px;
+    }
+    .intro-title {
+        font-size: 4.5rem;
+        width: 80%;
+    }
+    .intro-text {
+        margin-left: 30%;
+        margin-right: 30%;
     }
 }
   /* lg */
