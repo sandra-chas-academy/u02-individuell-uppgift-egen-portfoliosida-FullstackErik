@@ -30,14 +30,14 @@ body {
     width: 45px;
     height: auto;
     position: relative;
-    left: 90%;
+    left: 87%;
 }
-
+/* måste bytas */
 #navbar a:hover {
     background-color: aqua;
 }
 
-.nav-list-mobile {
+.nav_list-mobile {
     display: none;
     position: fixed;
     top: 0;
@@ -48,18 +48,18 @@ body {
     background-color: rgba(8, 199, 56, 0.884);
 }
 
-.list-item-mobile {
+.nav_list_item-mobile {
     width: 100%;
 }
 
-.list-item-mobile a{
+.nav_list_item-mobile a{
     text-decoration: none;
     font-size: 2rem;
     width: 100%;
     padding-left: 0.5rem;
 }
 
-.nav-list { 
+.nav_list { 
     display: none;
     flex-direction: column;
     align-items: center;
@@ -67,7 +67,7 @@ body {
     gap: 0.2rem;
 }
 
-.list-item a {
+.nav_list_item a {
     text-decoration: none;
 }
 
@@ -77,14 +77,14 @@ body {
     align-items: center;
 }
 
-.profile-Pic {
+.profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin: 0.5rem;
 }
 
-.intro-title {
+.intro_h2 {
     font-size: 3.5rem;
     text-align: center;
     color: aquamarine;
@@ -96,7 +96,7 @@ body {
     font-family: "bebas neue";
 }
 
-.intro-text {
+.intro_h3 {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -104,7 +104,17 @@ body {
     margin-right: 3rem;
 }
 
+.section_h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+}
 
+.about_p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
 
 
 
@@ -114,6 +124,9 @@ body {
     .container {
         max-width: 475px;
     }
+    #hamburger {
+        left: 90%;
+    }
 }
   /* sm */
 @media (min-width: 640px) {
@@ -121,18 +134,19 @@ body {
     max-width: 640px;
     }
     #hamburger {
-        left: 93%;
+        left: 92%;
     }
-    .profile-Pic {
+    .profile-pic {
         width: 200px;
         height: 200px;
     }
-    .intro-title {
+    .intro_h2 {
         font-size: 4rem;
     }
-    .intro-text {
+    .intro_h3 {
         margin-left: 25%;
         margin-right: 25%;
+        font-size: 1.5rem;
     }
 }
   /* md */
@@ -143,7 +157,7 @@ body {
     #hamburger {
         display: none;
     }
-    .nav-list { 
+    .nav_list { 
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
@@ -151,18 +165,18 @@ body {
         gap: 1rem;
         padding-right: 0.5rem;
     }
-    .nav-list-mobile {
+    .nav_list-mobile {
         display: none;
     }
-    .profile-Pic {
+    .profile-pic {
         width: 250px;
         height: 250px;
     }
-    .intro-title {
+    .intro_h2 {
         font-size: 4.5rem;
         width: 80%;
     }
-    .intro-text {
+    .intro_h3 {
         margin-left: 30%;
         margin-right: 30%;
     }
@@ -172,7 +186,7 @@ body {
     .container {
     max-width: 1024px;
     }
-    .nav-list {
+    .nav_list {
         gap: 2rem;
         font-size: 2.2rem;
         padding-right: 1rem;
@@ -183,7 +197,7 @@ body {
     .container {
     max-width: 1280px;
     }
-    .nav-list {
+    .nav_list {
         gap: 3rem;
     }
 }

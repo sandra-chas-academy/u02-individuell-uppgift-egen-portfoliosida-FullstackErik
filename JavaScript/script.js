@@ -1,4 +1,4 @@
-const dropDownList = document.querySelector(".nav-list-mobile");
+const dropDownList = document.querySelector(".nav_list-mobile");
 const hamburger = document.querySelector("#hamburger");
 const navbar = document.querySelector("#navbar");
 const body = document.querySelector("body");
@@ -23,6 +23,7 @@ function handleResize() {
     }
 
 }
+
 
 //function to open mobile navbar
 function showNav() {
