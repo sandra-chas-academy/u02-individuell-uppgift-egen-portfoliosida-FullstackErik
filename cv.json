@@ -1,4 +1,13 @@
-{
+{   
+    "me": {
+        "age": 32,
+        "firstName": "Erik",
+        "lastName": "Andersson",
+        "middleName": "Leonard",
+        "location": "gustavsberg",
+        "gender": "male",
+        "occupation": "student"
+    },
     "educations": [
         {
             "school": "Hemmestaskolan",

@@ -4,7 +4,7 @@ const navbar = document.querySelector("#navbar");
 const body = document.querySelector("body");
 const mobileMediaQuery = window.matchMedia("(max-width: 768px)");
 const modalBtns = document.querySelectorAll("button");
-
+const firstName = document.querySelectorAll(".name")
 
 handleResize();
 mobileMediaQuery.addEventListener("change", handleResize);
@@ -67,3 +67,47 @@ function closeNav() {
     body.removeEventListener("click", closeNav);
 }
 
+async function getCV() {
+
+    const url = "./cv.json";
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("HTTP" + response.status);
+        }
+        const data = await response.json();
+        return data;
+    } catch(error) {
+        console.log(error)
+    }
+}
+
+getJobs();
+getEducations();
+getExperiences();
+getMe();
+
+async function getJobs() {
+    const cv = await getCV();
+    console.log(cv.jobs)
+    return(cv.jobs)
+}
+
+async function getEducations() {
+    const cv = await getCV();
+    console.log(cv.educations)
+    return(cv.educations)
+}
+
+async function getExperiences() {
+    const cv = await getCV();
+    console.log(cv.experiences);
+    return(cv.experiences)
+}
+
+async function getMe () {
+    const cv = await getCV();
+    console.log(cv.me);
+    return(cv.me);
+}
