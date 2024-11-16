@@ -14,15 +14,14 @@ modalBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
         const showPage = e.target.dataset.page;
         const modalDiv = document.querySelector(`#${showPage}`);
-        btn.style.backgroundColor = "#696969";
-
+        btn.style.backgroundColor = "#009fb8";
         modalDiv.style.display = "block";
         const closeModal = document.createElement("div");
         closeModal.classList = "closeModal";
         closeModal.addEventListener("click", () => {
             modalDiv.style.display = "none";
             closeModal.style.display = "none";
-            btn.style.backgroundColor = "#929292";
+            btn.style.backgroundColor = "#00d6f9";
             body.removeChild(closeModal)
         })
         body.appendChild(closeModal)
@@ -57,6 +56,13 @@ function showNav() {
         body.addEventListener("click", closeNav);
     }, 0);
 
+    const closeModal = document.createElement("div");
+    closeModal.classList = "closeModal";
+    closeModal.addEventListener("click", () => {
+        closeModal.style.display = "none";
+        body.removeChild(closeModal)
+    })
+    body.appendChild(closeModal)
 }
 
 //function to close mobile navbar
