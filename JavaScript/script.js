@@ -3,9 +3,31 @@ const hamburger = document.querySelector("#hamburger");
 const navbar = document.querySelector("#navbar");
 const body = document.querySelector("body");
 const mobileMediaQuery = window.matchMedia("(max-width: 768px)");
+const modalBtns = document.querySelectorAll("button");
+const aboutDiv = document.querySelector("#about");
+const projectsDiv = document.querySelector("#projects");
+
 
 handleResize();
 mobileMediaQuery.addEventListener("change", handleResize);
+
+//eventlisteners för alla knappar
+modalBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        const showPage = e.target.dataset.page;
+        if (showPage === aboutDiv.id) {
+            aboutDiv.style.display = "block"
+            const closeModal = document.createElement("div")
+            closeModal.classList = "closeModal";
+            closeModal.addEventListener("click", () => {
+                aboutDiv.style.display = "none";
+                closeModal.style.display = "none";
+            })
+            body.appendChild(closeModal)
+
+        }
+    })
+})
 
 //function so nav bar doesnt break upon resizing window
 function handleResize() {
@@ -38,7 +60,7 @@ function showNav() {
 }
 
 //function to close mobile navbar
-function closeNav(e) {
+function closeNav() {
 
     dropDownList.style.display = "none";
     hamburger.style.visibility = "visible";
