@@ -4,8 +4,6 @@ const navbar = document.querySelector("#navbar");
 const body = document.querySelector("body");
 const mobileMediaQuery = window.matchMedia("(max-width: 768px)");
 const modalBtns = document.querySelectorAll("button");
-const aboutDiv = document.querySelector("#about");
-const projectsDiv = document.querySelector("#projects");
 
 
 handleResize();
@@ -15,17 +13,19 @@ mobileMediaQuery.addEventListener("change", handleResize);
 modalBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
         const showPage = e.target.dataset.page;
-        if (showPage === aboutDiv.id) {
-            aboutDiv.style.display = "block"
-            const closeModal = document.createElement("div")
-            closeModal.classList = "closeModal";
-            closeModal.addEventListener("click", () => {
-                aboutDiv.style.display = "none";
-                closeModal.style.display = "none";
-            })
-            body.appendChild(closeModal)
+        const modalDiv = document.querySelector(`#${showPage}`);
+        btn.style.backgroundColor = "#696969";
 
-        }
+        modalDiv.style.display = "block";
+        const closeModal = document.createElement("div");
+        closeModal.classList = "closeModal";
+        closeModal.addEventListener("click", () => {
+            modalDiv.style.display = "none";
+            closeModal.style.display = "none";
+            btn.style.backgroundColor = "#929292";
+            body.removeChild(closeModal)
+        })
+        body.appendChild(closeModal)
     })
 })
 
