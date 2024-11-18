@@ -22,7 +22,6 @@ body {
     background-image: url("../images/colors.png");
     background-position: center; 
     background-repeat: no-repeat;
-
 }
 
 #navbar {
@@ -115,7 +114,6 @@ body {
 .section_h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    margin-left: 1rem;
 }
 
 .modal_about_p {
@@ -144,10 +142,10 @@ body {
 
 #about, #projects, #contact{
     width: 90vw;
-    height: 60vh;
+    height: 550px;
     display: none;
     position: fixed;
-    background-color: #16dcfa;
+    background-color: #35abbd;
     z-index: 9;
     top: 0;
     bottom: 0;
@@ -164,6 +162,12 @@ body {
     margin-bottom: auto;
 }
 
+.modal section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .closeModal {
     margin: 0;
     width: 100vw;
@@ -174,6 +178,43 @@ body {
     z-index: 5;
     top: 0;
     left: 0;
+}
+
+.modal-cv {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.modal_h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.jobs_upper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.jobs_lower {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+}
+
+.cv_duration {
+    margin-right: auto;
+}
+
+.modal-cv div h4 {
+    font-weight: 400;
+    color: black;
+    letter-spacing: 2px;
 }
 
 /* xs */

@@ -5,6 +5,8 @@ const body = document.querySelector("body");
 const mobileMediaQuery = window.matchMedia("(max-width: 768px)");
 const modalBtns = document.querySelectorAll("button");
 const firstName = document.querySelectorAll(".name")
+const cvJobs = document.querySelector(".jobs");
+const cvEducations = document.querySelector(".educations");
 
 handleResize();
 mobileMediaQuery.addEventListener("change", handleResize);
@@ -89,3 +91,65 @@ async function getCV() {
     }
 }
 
+
+async function writeCV() {
+    const cv = await getCV();
+    jobs = cv.jobs;
+    study = cv.educations;
+    console.log(cv)
+    cvJobs.innerHTML = `
+                        <div class="jobs_upper">
+                        <h4 class="cv_profession">${jobs[0].profession}</h4>
+                        <h4 class="cv_company">${jobs[0].company}</h4>
+                        </div>
+                        <div class="jobs_lower">
+                        <h4 class="cv_duration">${jobs[0].duration}</h4>
+                        <h4 class="cv_contact">${jobs[0].contact.name}:</h4>
+                        <h4 class="cv_contact_number">${jobs[0].contact.phone_number}</h4>
+                        </div>
+                        <div class="jobs_upper">
+                        <h4 class="cv_profession">${jobs[1].profession}</h4>
+                        <h4 class="cv_company">${jobs[1].company}</h4>
+                        </div>
+                        <div class="jobs_lower">
+                        <h4 class="cv_duration">${jobs[1].duration}</h4>
+                        <h4 class="cv_contact">${jobs[1].contact.name}:</h4>
+                        <h4 class="cv_contact_number">${jobs[1].contact.phone_number}</h4>
+                        </div>
+                        <div class="jobs_upper">
+                        <h4 class="cv_profession">${jobs[2].profession}</h4>
+                        <h4 class="cv_company">${jobs[2].company}</h4>
+                        </div>
+                        <div class="jobs_lower">
+                        <h4 class="cv_duration">${jobs[2].duration}</h4>
+                        <h4 class="cv_contact">${jobs[2].contact.name}:</h4>
+                        <h4 class="cv_contact_number">${jobs[2].contact.phone_number}</h4>
+                        </div>`;
+    cvEducations.innerHTML = `
+                        <div class="jobs_upper">
+                        <h4>${study[0].kindOf}</h4>
+                        <h4>${study[0].from}-${study[0].to}</h4>
+                        </div>
+                        <div class="jobs_lower">
+                        <h4>${study[0].school}</h4>
+                        <h4>${study[0].grades}</h4>
+                        </div>
+                        <div class="jobs_upper">
+                        <h4>${study[1].kindOf}</h4>
+                        <h4>${study[1].from}-${study[1].to}</h4>
+                        </div>
+                        <div class="jobs_lower">
+                        <h4>${study[1].school}</h4>
+                        <h4>${study[1].grades}</h4>
+                        </div>
+                        <div class="jobs_upper">
+                        <h4>${study[2].kindOf}</h4>
+                        <h4>${study[2].from}-${study[2].to}</h4>
+                        </div>
+                        <div class="jobs_lower">
+                        <h4>${study[2].school}</h4>
+                        <h4>${study[2].grades}</h4>
+                        </div>
+    `
+}
+writeCV()

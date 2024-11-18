@@ -4,7 +4,7 @@
         "firstName": "Erik",
         "lastName": "Andersson",
         "middleName": "Leonard",
-        "location": "gustavsberg",
+        "location": "Gustavsberg",
         "gender": "male",
         "occupation": "student"
     },
@@ -15,17 +15,17 @@
             "from": 1998,
             "to": 2008,
             "location": "Värmdö",
-            "kind-of": "grundskola",
-            "grades": "(insert PDF here)"
+            "kindOf": "Grundskola",
+            "grades": "⭐"
         },
         {
-            "school": "Värmdö Tekniska Gymnasium",
+            "school": "Värmdö Tekniska",
             "duration": "3 years",
             "from": 2008,
             "to": 2011,
             "location": "Värmdö",
-            "kind-of": "gymnasial",
-            "grades": "(insert PDF here)"
+            "kindOf": "Gymnasial",
+            "grades": "10 av 10"
         },
         {
             "school": "Chas Academy",
@@ -33,7 +33,7 @@
             "from": 2024,
             "to": 2026,
             "location": "Globen",
-            "kind-of": "YH",
+            "kindOf": "YH FullstackJavaScript",
             "grades": "In progress"
         }
     ],
@@ -48,7 +48,7 @@
             }
         },
         {
-            "profession": "Delivery driver",
+            "profession": "Driver",
             "duration": "5 years",
             "company": "Skarpnäcks åkeri",
             "contact": {
