@@ -89,31 +89,3 @@ async function getCV() {
     }
 }
 
-getJobs();
-getEducations();
-getExperiences();
-getMe();
-
-async function getJobs() {
-    const cv = await getCV();
-    console.log(cv.jobs)
-    return(cv.jobs)
-}
-
-async function getEducations() {
-    const cv = await getCV();
-    console.log(cv.educations)
-    return(cv.educations)
-}
-
-async function getExperiences() {
-    const cv = await getCV();
-    console.log(cv.experiences);
-    return(cv.experiences)
-}
-
-async function getMe () {
-    const cv = await getCV();
-    console.log(cv.me);
-    return(cv.me);
-}
