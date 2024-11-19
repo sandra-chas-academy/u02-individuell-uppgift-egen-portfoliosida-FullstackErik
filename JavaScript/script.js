@@ -59,15 +59,12 @@ function showNav() {
     dropDownList.style.display = "block";
     hamburger.style.visibility = "hidden";
 
-    setTimeout(() => {
-        body.addEventListener("click", closeNav);
-    }, 0);
-
     const closeModal = document.createElement("div");
     closeModal.classList = "closeModal";
     closeModal.addEventListener("click", () => {
         closeModal.style.display = "none";
         body.removeChild(closeModal)
+        closeNav()
     })
     body.appendChild(closeModal)
 }
