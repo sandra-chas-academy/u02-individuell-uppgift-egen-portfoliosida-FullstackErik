@@ -15,12 +15,17 @@ mobileMediaQuery.addEventListener("change", handleResize);
 modalBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
         const showPage = e.target.dataset.page;
+        if (showPage === "about") {
+            writeCV()
+        }
+
         const modalDiv = document.querySelector(`#${showPage}`);
         btn.style.backgroundColor = "#009fb8";
         modalDiv.style.display = "block";
         const closeModal = document.createElement("div");
         closeModal.classList = "closeModal";
         closeModal.addEventListener("click", () => {
+            console.log("tar bort blurmodal")
             modalDiv.style.display = "none";
             closeModal.style.display = "none";
             btn.style.backgroundColor = "#00d6f9";
@@ -32,7 +37,7 @@ modalBtns.forEach(btn => {
 
 //function so nav bar doesnt break upon resizing window
 function handleResize() {
-
+    console.log("running handleResize");
     dropDownList.style.display = "none";
 
     if (mobileMediaQuery.matches) {
@@ -50,7 +55,7 @@ function handleResize() {
 
 //function to open mobile navbar
 function showNav() {
-
+    console.log("running showNav");
     dropDownList.style.display = "block";
     hamburger.style.visibility = "hidden";
 
@@ -69,14 +74,14 @@ function showNav() {
 
 //function to close mobile navbar
 function closeNav() {
-
+    console.log("running closeNav");
     dropDownList.style.display = "none";
     hamburger.style.visibility = "visible";
     body.removeEventListener("click", closeNav);
 }
 
 async function getCV() {
-
+    console.log("running getCV");
     const url = "./cv.json";
     try {
         const response = await fetch(url);
@@ -93,6 +98,7 @@ async function getCV() {
 
 
 async function writeCV() {
+    console.log("running writeCV");
     const cv = await getCV();
     jobs = cv.jobs;
     study = cv.educations;
@@ -152,4 +158,3 @@ async function writeCV() {
                         </div>
     `
 }
-writeCV()

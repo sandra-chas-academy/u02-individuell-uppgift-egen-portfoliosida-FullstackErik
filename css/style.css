@@ -126,7 +126,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 96%;
     height: 3rem;
 }
 
@@ -142,7 +141,7 @@ body {
 
 #about, #projects, #contact{
     width: 90vw;
-    height: 550px;
+    height: 520px;
     display: none;
     position: fixed;
     background-color: #35abbd;
