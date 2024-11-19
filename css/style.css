@@ -19,9 +19,10 @@
 }
 
 body {
-    background-image: url("../images/colors.png");
+    /* background-image: url("../images/colors.png");
     background-position: center; 
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    background-color: #181818;
 }
 
 #navbar {
@@ -80,35 +81,56 @@ body {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
     margin: 0.5rem;
-    box-shadow: 0 0 50px 50px black inset;
 }
 
 .intro_h2 {
-    font-size: 3.5rem;
     text-align: center;
-    /* color: aquamarine; */
-    font-weight: 800;
-    line-height: 85%;
-    letter-spacing: 2px;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    font-family: "bebas neue";
-    background: rgb(0,214,249);
-    background: linear-gradient(141deg, rgba(0,214,249,1) 31%, rgba(245,26,214,1) 67%);
-    -webkit-text-fill-color: transparent; 
-    background-clip: text; 
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+span {
+    position: relative;
+}
+
+span::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: #00d6f9;
+    left: 0;
+    bottom: 5px;
+    position: absolute;
 }
 
 .intro_h3 {
+    font-size: 3.8rem;
     text-align: center;
-    margin-top: 2rem;
+    font-weight: 800;
+    line-height: 85%;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    font-family: "bebas neue";
+    background: #00d6f9;
+    background: linear-gradient(141deg, rgba(0,214,249,1) 31%, rgba(245,26,214,1) 67%);
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    width: 80%;
+}
+
+.intro_h4 {
+    text-align: center;
     margin-bottom: 2rem;
     margin-left: 3rem;
     margin-right: 3rem;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 
 .section_h2 {
@@ -240,12 +262,14 @@ body {
         width: 200px;
         height: 200px;
     }
-    .intro_h2 {
-        font-size: 4rem;
-    }
     .intro_h3 {
-        margin-left: 25%;
-        margin-right: 25%;
+        font-size: 4.2rem;
+        width: 60%;
+    }
+    .intro_h2 {
+        font-size: 2.4rem;
+    }
+    .intro_h4 {
         font-size: 1.5rem;
     }
     .nav_list-mobile {
@@ -275,13 +299,13 @@ body {
         width: 250px;
         height: 250px;
     }
-    .intro_h2 {
-        font-size: 4.5rem;
-        width: 80%;
-    }
     .intro_h3 {
-        margin-left: 30%;
-        margin-right: 30%;
+        font-size: 4rem;
+        width: 100%;
+    }
+    span::after {
+        height: 4px;
+        bottom: 4px;
     }
 }
   /* lg */
@@ -294,6 +318,12 @@ body {
         font-size: 2.2rem;
         padding-right: 1rem;
     }
+    .intro_h3 {
+        font-size: 4.5rem;
+    }
+    .intro_h4 {
+        width: 60%;
+    }
 }
   /* xl */
 @media (min-width: 1280px) {
@@ -302,6 +332,9 @@ body {
     }
     .nav_list {
         gap: 3rem;
+    }
+    .intro_h4 {
+        width: 50%;
     }
 }
   /* 2xl */
