@@ -25,6 +25,21 @@ body {
     background-color: #181818;
 }
 
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes nameLine{
+    from {
+        width: 0%;
+        transform: translateX(-50%);
+    }
+    to {
+        width: 100%;
+        transform: translateX(-50%);
+    }
+}
+
 #navbar {
     padding: 1rem 0;
 }
@@ -34,6 +49,9 @@ body {
     height: auto;
     position: relative;
     left: 87%;
+    opacity: 0;
+    animation: fadeIn ease-in 0.5s forwards;
+    animation-delay: 0.5s;
 }
 /* måste bytas */
 #navbar a:hover {
@@ -88,6 +106,9 @@ body {
     height: 175px;
     border-radius: 50%;
     margin: 0.5rem;
+    opacity: 0;
+    animation: fadeIn ease-in 0.5s forwards;
+    animation-delay: 1s;
 }
 
 .intro_h2 {
@@ -96,6 +117,9 @@ body {
     margin-bottom: 2rem;
     font-weight: 400;
     font-size: 2rem;
+    opacity: 0;
+    animation: fadeIn ease-in 0.5s forwards;
+    animation-delay: 1.5s;
 }
 
 .myName {
@@ -108,9 +132,13 @@ body {
     width: 100%;
     background: #00d6f9;
     background: linear-gradient(141deg, rgba(0,214,249,1) 31%, rgba(245,26,214,1) 67%);
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 5px;
     position: absolute;
+    width: 0;
+    animation: nameLine 0.5s forwards;
+    animation-delay: 3.5s;
 }
 
 .intro_h3 {
@@ -126,6 +154,9 @@ body {
     -webkit-text-fill-color: transparent; 
     background-clip: text; 
     width: 80%;
+    opacity: 0;
+    animation: fadeIn ease-in 0.5s forwards;
+    animation-delay: 2s;
 }
 
 .intro_h4 {
@@ -135,6 +166,9 @@ body {
     margin-right: 3rem;
     font-weight: 400;
     font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeIn ease-in 0.5s forwards;
+    animation-delay: 2.5s;
 }
 
 .section_h2 {
@@ -154,6 +188,9 @@ body {
     align-items: center;
     height: 3rem;
     gap: 8px;
+    opacity: 0;
+    animation: fadeIn ease-in 0.5s forwards;
+    animation-delay: 3s;
 }
 
 .btns button {
