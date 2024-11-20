@@ -106,7 +106,7 @@ async function writeCV() {
                         <h4 class="cv_contact">${job.contact.name}:</h4>
                         <h4 class="cv_contact_number">${job.contact.phone_number}</h4>
                         </div>
-                        `).join('');
+                        `).join("");
     cvEducations.innerHTML = educations.map(study => `
                         <div class="about_upper">
                         <h4>${study.kindOf}</h4>
