@@ -3,6 +3,7 @@ desktop slider med 3 olika sidor, pilknappar på sidan för att byta sida med en
 vilken sida du är på (går att klicka oxå)
 https://www.youtube.com/watch?v=gzXyRa7jwk4 ish
 
-hover på knapparna
+hover på desktop nav bar (kommer ner från toppen med animation 
+samma färg som knapphover)
 
 fixa styling på navbar för desktop
