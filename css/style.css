@@ -48,7 +48,10 @@ body {
     height: 100vh;
     width: 170px;
     z-index: 99;
-    background-color: #00d8f9c4;
+    background-color: #181818;
+    -webkit-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.6);
 }
 
 .nav_list_item-mobile {
@@ -104,6 +107,7 @@ body {
     height: 3px;
     width: 100%;
     background: #00d6f9;
+    background: linear-gradient(141deg, rgba(0,214,249,1) 31%, rgba(245,26,214,1) 67%);
     left: 0;
     bottom: 5px;
     position: absolute;
@@ -149,16 +153,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 3rem;
+    gap: 8px;
 }
 
 .btns button {
-    width: 32%;
+    width: 120px;
     height: 100%;
-    color: black;
-    border: 1px solid rgb(0, 0, 0);
-    font-size: 1.2rem;
-    background-color: #00d6f9;
-    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 1.3rem;
+    background-color: #00000000;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
 }
 
 #about, #projects, #contact{
@@ -166,7 +171,7 @@ body {
     height: 520px;
     display: none;
     position: fixed;
-    background-color: #35abbd;
+    background-color: #181818;
     z-index: 9;
     top: 0;
     bottom: 0;
@@ -177,39 +182,6 @@ body {
     box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.6);
     border-radius: 3px;
 }
-
-@keyframes slideInFromLeft {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInFromRight {
-    from {
-        transform: translateX(+100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-#aboutBtn, #projectsBtn {
-    position: relative; /* Ensure proper positioning for animation */
-    transform: translateX(-100%); /* Start off-screen */
-    animation: slideInFromLeft 0.5s forwards; /* Apply the animation */
-}
-
-
-#projectsBtn {
-    animation-delay: 1s;
-}
-
-#contactBtn {
-    animation-delay: 2s;
-}
-
 
 .modal {
     margin-top: auto;
@@ -256,7 +228,7 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(255, 255, 255);
     margin-bottom: 0.5rem;
     gap: 0.5rem;
 }
@@ -267,7 +239,7 @@ body {
 
 .modal-cv div h4 {
     font-weight: 400;
-    color: black;
+    color: white;
     letter-spacing: 2px;
 }
 
@@ -281,6 +253,9 @@ body {
     }
     .nav_list-mobile {
         width: 200px;
+    }
+    .btns button { 
+        width: 30%;
     }
 }
   /* sm */
@@ -307,6 +282,9 @@ body {
     }
     .nav_list-mobile {
         width: 225px;
+    }
+    .btns button { 
+        width: 25%;
     }
 }
   /* md */

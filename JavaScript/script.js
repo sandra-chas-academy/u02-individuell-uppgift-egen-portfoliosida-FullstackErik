@@ -20,7 +20,8 @@ modalBtns.forEach(btn => {
         }
 
         const modalDiv = document.querySelector(`#${showPage}`);
-        btn.style.backgroundColor = "#009fb8";
+        btn.style.backgroundColor = "#707070a4";
+        btn.style.border = "none";
         modalDiv.style.display = "block";
         const closeModal = document.createElement("div");
         closeModal.classList = "closeModal";
@@ -28,7 +29,8 @@ modalBtns.forEach(btn => {
             console.log("tar bort blurmodal")
             modalDiv.style.display = "none";
             closeModal.style.display = "none";
-            btn.style.backgroundColor = "#00d6f9";
+            btn.style.backgroundColor = "#00000000";
+            btn.style.border = "1px solid #ffffff"
             body.removeChild(closeModal)
         })
         body.appendChild(closeModal)
