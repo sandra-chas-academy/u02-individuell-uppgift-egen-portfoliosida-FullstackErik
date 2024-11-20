@@ -18,8 +18,7 @@ modalBtns.forEach(btn => {
         if (showPage === "about") {
             writeCV()
         }
-
-        const modalDiv = document.querySelector(`#${showPage}`);
+        const modalDiv = document.querySelector(`#${showPage}Modal`);
         btn.style.backgroundColor = "#707070a4";
         btn.style.border = "none";
         modalDiv.style.display = "block";
@@ -51,9 +50,7 @@ function handleResize() {
         body.removeEventListener("click", closeNav);
         closeNav();
     }
-
 }
-
 
 //function to open mobile navbar
 function showNav() {
@@ -95,65 +92,29 @@ async function getCV() {
     }
 }
 
-
 async function writeCV() {
     console.log("running writeCV");
     const cv = await getCV();
-    jobs = cv.jobs;
-    study = cv.educations;
-    console.log(cv)
-    cvJobs.innerHTML = `
-                        <div class="jobs_upper">
-                        <h4 class="cv_profession">${jobs[0].profession}</h4>
-                        <h4 class="cv_company">${jobs[0].company}</h4>
+    const {jobs, educations} = cv;
+    cvJobs.innerHTML = jobs.map(job => `
+                        <div class="about_upper">
+                        <h4 class="cv_profession">${job.profession}</h4>
+                        <h4 class="cv_company">${job.company}</h4>
                         </div>
-                        <div class="jobs_lower">
-                        <h4 class="cv_duration">${jobs[0].duration}</h4>
-                        <h4 class="cv_contact">${jobs[0].contact.name}:</h4>
-                        <h4 class="cv_contact_number">${jobs[0].contact.phone_number}</h4>
+                        <div class="about_lower">
+                        <h4 class="cv_duration">${job.duration}</h4>
+                        <h4 class="cv_contact">${job.contact.name}:</h4>
+                        <h4 class="cv_contact_number">${job.contact.phone_number}</h4>
                         </div>
-                        <div class="jobs_upper">
-                        <h4 class="cv_profession">${jobs[1].profession}</h4>
-                        <h4 class="cv_company">${jobs[1].company}</h4>
+                        `).join('');
+    cvEducations.innerHTML = educations.map(study => `
+                        <div class="about_upper">
+                        <h4>${study.kindOf}</h4>
+                        <h4>${study.from}-${study.to}</h4>
                         </div>
-                        <div class="jobs_lower">
-                        <h4 class="cv_duration">${jobs[1].duration}</h4>
-                        <h4 class="cv_contact">${jobs[1].contact.name}:</h4>
-                        <h4 class="cv_contact_number">${jobs[1].contact.phone_number}</h4>
+                        <div class="about_lower">
+                        <h4>${study.school}</h4>
+                        <h4>${study.grades}</h4>
                         </div>
-                        <div class="jobs_upper">
-                        <h4 class="cv_profession">${jobs[2].profession}</h4>
-                        <h4 class="cv_company">${jobs[2].company}</h4>
-                        </div>
-                        <div class="jobs_lower">
-                        <h4 class="cv_duration">${jobs[2].duration}</h4>
-                        <h4 class="cv_contact">${jobs[2].contact.name}:</h4>
-                        <h4 class="cv_contact_number">${jobs[2].contact.phone_number}</h4>
-                        </div>`;
-    cvEducations.innerHTML = `
-                        <div class="jobs_upper">
-                        <h4>${study[0].kindOf}</h4>
-                        <h4>${study[0].from}-${study[0].to}</h4>
-                        </div>
-                        <div class="jobs_lower">
-                        <h4>${study[0].school}</h4>
-                        <h4>${study[0].grades}</h4>
-                        </div>
-                        <div class="jobs_upper">
-                        <h4>${study[1].kindOf}</h4>
-                        <h4>${study[1].from}-${study[1].to}</h4>
-                        </div>
-                        <div class="jobs_lower">
-                        <h4>${study[1].school}</h4>
-                        <h4>${study[1].grades}</h4>
-                        </div>
-                        <div class="jobs_upper">
-                        <h4>${study[2].kindOf}</h4>
-                        <h4>${study[2].from}-${study[2].to}</h4>
-                        </div>
-                        <div class="jobs_lower">
-                        <h4>${study[2].school}</h4>
-                        <h4>${study[2].grades}</h4>
-                        </div>
-    `
+                        `).join("");
 }

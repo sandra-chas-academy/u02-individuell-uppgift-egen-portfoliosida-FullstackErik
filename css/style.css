@@ -166,7 +166,7 @@ body {
     font-weight: 300;
 }
 
-#about, #projects, #contact{
+#aboutModal, #projectsModal, #contactModal{
     width: 90vw;
     height: 520px;
     display: none;
@@ -180,7 +180,7 @@ body {
     -webkit-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.6);
     -moz-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.6);
     box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.6);
-    border-radius: 3px;
+    border-radius: 6px;
 }
 
 .modal {
@@ -218,13 +218,13 @@ body {
     font-weight: 600;
 }
 
-.jobs_upper {
+.about_upper {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-.jobs_lower {
+.about_lower {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -320,6 +320,7 @@ body {
     }
 }
   /* lg */
+  /* här byts modal och knapparna ut */
 @media (min-width: 1024px) {
     .container {
     max-width: 1024px;
