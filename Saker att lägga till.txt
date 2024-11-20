@@ -3,6 +3,8 @@ desktop slider med 3 olika sidor, pilknappar på sidan för att byta sida med en
 vilken sida du är på (går att klicka oxå)
 https://www.youtube.com/watch?v=gzXyRa7jwk4 ish
 
-lägg till div som gör sidan mörkare när navbar e öppen på mobilen.
+lägg till div som gör sidan mörkare när navbar e öppen på mobilen. ?
 
-CV i mobile view ska bara visa Yrke----Duration
+animation för knappar?
+
+

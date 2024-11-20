@@ -95,11 +95,11 @@ body {
     font-size: 2rem;
 }
 
-span {
+.myName {
     position: relative;
 }
 
-span::after {
+.myName::after {
     content: "";
     height: 3px;
     width: 100%;
@@ -177,6 +177,39 @@ span::after {
     box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.6);
     border-radius: 3px;
 }
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(+100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+#aboutBtn, #projectsBtn {
+    position: relative; /* Ensure proper positioning for animation */
+    transform: translateX(-100%); /* Start off-screen */
+    animation: slideInFromLeft 0.5s forwards; /* Apply the animation */
+}
+
+
+#projectsBtn {
+    animation-delay: 1s;
+}
+
+#contactBtn {
+    animation-delay: 2s;
+}
+
 
 .modal {
     margin-top: auto;
@@ -303,7 +336,7 @@ span::after {
         font-size: 4rem;
         width: 100%;
     }
-    span::after {
+    .myName::after {
         height: 4px;
         bottom: 4px;
     }
@@ -335,6 +368,34 @@ span::after {
     }
     .intro_h4 {
         width: 50%;
+    }
+    .intro {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        height: 500px;
+    }
+    .intro_h2 {
+        order: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .intro_h3 {
+        order: 1;
+        width: 423px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .profile-pic {
+        order: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .intro_h4 {
+        order: 3;
+        width: 35%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
   /* 2xl */
