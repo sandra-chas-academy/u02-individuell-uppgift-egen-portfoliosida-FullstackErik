@@ -7,9 +7,11 @@ const modalBtns = document.querySelectorAll("button");
 const firstName = document.querySelectorAll(".name")
 const cvJobs = document.querySelector(".jobs");
 const cvEducations = document.querySelector(".educations");
+const navLinks = document.querySelectorAll("a");
 
 handleResize();
 mobileMediaQuery.addEventListener("change", handleResize);
+navLinks.forEach(link => link.addEventListener("click", closeNav));
 
 //eventlisteners för alla knappar
 modalBtns.forEach(btn => {

@@ -15,7 +15,9 @@
     /* border för att underlätta design, ta bort sen */
     /* border: 1px solid red; */
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     /* background-image: url("../images/colors.png");
     background-position: center; 
@@ -138,7 +140,7 @@ body {
     bottom: 5px;
     position: absolute;
     width: 0;
-    animation: nameLine 0.5s forwards;
+    animation: nameLine 1s forwards;
     animation-delay: 3.5s;
 }
 

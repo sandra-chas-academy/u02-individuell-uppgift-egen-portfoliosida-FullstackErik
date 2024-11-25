@@ -15,14 +15,14 @@
         <nav id="navbar">
             <img src="images/hamburger-icon-white.svg" alt="Hamburger icon" id="hamburger">
             <ul class="nav_list">
-                <li class="nav_list_item"><a href="#">About</a></li>
-                <li class="nav_list_item"><a href="#">Projects</a></li>
-                <li class="nav_list_item"><a href="#" class="link">Contact</a></li>
+                <li class="nav_list_item"><a href="#aboutBtn">About</a></li>
+                <li class="nav_list_item"><a href="#projectsBtn">Projects</a></li>
+                <li class="nav_list_item"><a href="#contactBtn" class="link">Contact</a></li>
             </ul>
             <ul class="nav_list-mobile">
-                <li class="nav_list_item-mobile"><a href="#">About</a></li>
-                <li class="nav_list_item-mobile"><a href="#">Projects</a></li>
-                <li class="nav_list_item-mobile"><a href="#">Contact</a></li>
+                <li class="nav_list_item-mobile"><a href="#aboutBtn">About</a></li>
+                <li class="nav_list_item-mobile"><a href="#projectsBtn">Projects</a></li>
+                <li class="nav_list_item-mobile"><a href="#contactBtn">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -33,9 +33,9 @@
         <h4 class="intro_h4">I'm an aspiring Fullstack JavaScript Developer based in Stockholm currently studying at Chas Academy!</h4>
     </main>
     <div class="container btns">
-            <button data-page="about">About me</button>
-            <button data-page="projects">My projects</button>
-            <button data-page="contact">Contact</button>
+            <button data-page="about" id="aboutBtn">About me</button>
+            <button data-page="projects" id="projectsBtn">My projects</button>
+            <button data-page="contact" id="contactBtn">Contact</button>
     </div>
     <div class="container modal" id="aboutModal">
         <section class="modal_about">
