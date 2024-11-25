@@ -8,10 +8,10 @@ const firstName = document.querySelectorAll(".name")
 const cvJobs = document.querySelector(".jobs");
 const cvEducations = document.querySelector(".educations");
 const navLinks = document.querySelectorAll("a");
+let closeModal;
 
 handleResize();
 mobileMediaQuery.addEventListener("change", handleResize);
-navLinks.forEach(link => link.addEventListener("click", closeNav));
 
 //eventlisteners för alla knappar
 modalBtns.forEach(btn => {
@@ -27,7 +27,6 @@ modalBtns.forEach(btn => {
         const closeModal = document.createElement("div");
         closeModal.classList = "closeModal";
         closeModal.addEventListener("click", () => {
-            console.log("tar bort blurmodal")
             modalDiv.style.display = "none";
             closeModal.style.display = "none";
             btn.style.backgroundColor = "#00000000";
@@ -60,22 +59,33 @@ function showNav() {
     dropDownList.style.display = "block";
     hamburger.style.visibility = "hidden";
 
-    const closeModal = document.createElement("div");
-    closeModal.classList = "closeModal";
-    closeModal.addEventListener("click", () => {
-        closeModal.style.display = "none";
-        body.removeChild(closeModal)
-        closeNav()
-    })
-    body.appendChild(closeModal)
+    if (!closeModal) {
+        closeModal = document.createElement("div");
+        closeModal.classList = "closeModal";
+        closeModal.addEventListener("click", closeNav);
+        body.appendChild(closeModal);
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", closeNav);
+    });
 }
 
 //function to close mobile navbar
 function closeNav() {
     console.log("running closeNav");
+
     dropDownList.style.display = "none";
     hamburger.style.visibility = "visible";
-    body.removeEventListener("click", closeNav);
+
+    if (closeModal) {
+        closeModal.removeEventListener("click", closeNav);
+        body.removeChild(closeModal);
+        closeModal = null;
+    }
+    navLinks.forEach(link => {
+        link.removeEventListener("click", closeNav);
+    });
 }
 
 async function getCV() {
