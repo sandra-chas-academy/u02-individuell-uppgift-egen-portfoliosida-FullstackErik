@@ -187,18 +187,18 @@ body {
 
 .btns {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 3rem;
     gap: 8px;
     opacity: 0;
     animation: fadeIn ease-in 0.5s forwards;
     animation-delay: 3s;
 }
 
-button {
-    width: 120px;
-    height: 100%;
+.btns button {
+    width: 60%;
+    height: 50px;
     border: 1px solid rgb(255, 255, 255);
     font-size: 1.3rem;
     background-color: #00000000;
@@ -296,7 +296,7 @@ button:hover {
         width: 200px;
     }
     .btns button { 
-        width: 30%;
+        width: 375px;
     }
 }
   /* sm */
@@ -323,6 +323,9 @@ button:hover {
     }
     .nav_list-mobile {
         width: 225px;
+    }
+    .btns {
+        flex-direction: row;
     }
     .btns button { 
         width: 25%;
