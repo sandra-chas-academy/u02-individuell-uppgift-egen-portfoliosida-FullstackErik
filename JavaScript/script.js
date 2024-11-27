@@ -32,6 +32,8 @@ modalBtns.forEach(btn => {
         const showPage = e.target.dataset.page;
         if (showPage === "about") {
             writeCV()
+        } else if (showPage === "projects") {
+            writeProjects()
         }
         const modalDiv = document.querySelector(`#${showPage}Modal`);
         btn.style.backgroundColor = "#707070a4";
@@ -176,4 +178,3 @@ async function writeProjects() {
         `
     ).join("");
 }
-writeProjects()
