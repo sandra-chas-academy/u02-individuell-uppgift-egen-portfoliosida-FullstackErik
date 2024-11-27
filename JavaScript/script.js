@@ -7,8 +7,21 @@ const modalBtns = document.querySelectorAll("button");
 const firstName = document.querySelectorAll(".name")
 const cvJobs = document.querySelector(".jobs");
 const cvEducations = document.querySelector(".educations");
+const repoCardContainer = document.querySelector(".card-container");
 const navLinks = document.querySelectorAll("a");
+const rightArrow = document.querySelector(".rightArrow");
+const leftArrow = document.querySelector(".leftArrow");
+
 let closeModal;
+
+rightArrow.addEventListener("click", () => {
+    repoCardContainer.style.scrollBehavior = "smooth";
+    repoCardContainer.scrollLeft += 250;
+});
+leftArrow.addEventListener("click", () => {
+    repoCardContainer.style.scrollBehavior = "smooth";
+    repoCardContainer.scrollLeft -= 250
+});
 
 handleResize();
 mobileMediaQuery.addEventListener("change", handleResize);
@@ -130,3 +143,37 @@ async function writeCV() {
                         </div>
                         `).join("");
 }
+
+async function getRepos() {
+    console.log("running getRepos");
+    const url = `https://api.github.com/users/FullstackErik/repos`;
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("HTTP" + response.status);
+        }
+        const data = await response.json();
+        console.log(data)
+        return data;
+    } catch(error) {
+        console.log(error)
+    }
+}
+
+async function writeProjects() {
+    console.log("running writeProjects");
+    const repos = await getRepos();
+
+    const chosenRepos = [];
+    chosenRepos.push(repos[1], repos[5], repos[8])
+    console.log(chosenRepos)
+    repoCardContainer.innerHTML = chosenRepos.map(repo => `
+        <div class="repos">
+        <h3 class="repos-h3">${repo.name}</h3>
+        <img src="${repo.language === "CSS" ? "images/CSS.svg": "images/javascript.svg"}" alt="" class="repos-img">
+        <p class="repos-p">${repo.description}</p></div>
+        `
+    ).join("");
+}
+writeProjects()
