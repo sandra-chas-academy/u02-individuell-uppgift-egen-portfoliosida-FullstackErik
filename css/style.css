@@ -12,16 +12,11 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
-    /* border för att underlätta design, ta bort sen */
-    /* border: 1px solid red; */
 }
 html {
     scroll-behavior: smooth;
 }
 body {
-    /* background-image: url("../images/colors.png");
-    background-position: center; 
-    background-repeat: no-repeat; */
     background-color: #181818;
 }
 
@@ -111,7 +106,7 @@ body {
     margin: 0.5rem;
     opacity: 0;
     animation: fadeIn ease-in 0.5s forwards;
-    animation-delay: 1s;
+    animation-delay: 0s;
 }
 
 .intro_h2 {
@@ -122,7 +117,7 @@ body {
     font-size: 2rem;
     opacity: 0;
     animation: fadeIn ease-in 0.5s forwards;
-    animation-delay: 1.5s;
+    animation-delay: 0.5s;
 }
 
 .myName {
@@ -141,7 +136,7 @@ body {
     position: absolute;
     width: 0;
     animation: nameLine 1s forwards;
-    animation-delay: 3.5s;
+    animation-delay: 0.5s;
 }
 
 .intro_h3 {
@@ -159,7 +154,7 @@ body {
     width: 80%;
     opacity: 0;
     animation: fadeIn ease-in 0.5s forwards;
-    animation-delay: 2s;
+    animation-delay: 0s;
 }
 
 .intro_h4 {
@@ -171,7 +166,7 @@ body {
     font-size: 1.2rem;
     opacity: 0;
     animation: fadeIn ease-in 0.5s forwards;
-    animation-delay: 2.5s;
+    animation-delay: 0.5s;
 }
 
 .section_h2 {
@@ -193,7 +188,7 @@ body {
     gap: 8px;
     opacity: 0;
     animation: fadeIn ease-in 0.5s forwards;
-    animation-delay: 3s;
+    animation-delay: 0s;
 }
 
 .btns button {
@@ -253,10 +248,66 @@ button:hover {
     width: 90%;
 }
 
-.modal_h3 {
+.card-container {
+    width: 60%;
+    height: 300px;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 12px rgb(255, 255, 255);
+    border-radius: 16px;
+    scroll-snap-type: x mandatory
+}
+
+.repos {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.wrapper {
+    margin-top: 10%;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+.arrow {
+    width: 50px;
+    height: auto;
+}
+
+.modal_h3  {
     margin-bottom: 1rem;
     font-size: 1.3rem;
     font-weight: 600;
+}
+
+.repos-h3 {
+    color: black;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.repos-img {
+    height: 55%;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.repos-p {
+    width: 100%;
+    height: 20%;
+    color: black;
+    padding: 5px;
 }
 
 .about_upper {
@@ -366,8 +417,7 @@ button:hover {
         bottom: 4px;
     }
 }
-  /* lg */
-  /* här byts modal och knapparna ut */
+  /* lg */ /* här byts modal och knapparna ut */
 @media (min-width: 1024px) {
     .container {
     max-width: 1024px;
@@ -405,7 +455,7 @@ button:hover {
         order: 0;
         margin-left: auto;
         margin-right: auto;
-        animation-delay: 1s;
+        animation-delay: 0s;
     }
     .intro_h3 {
         order: 1;
@@ -417,7 +467,7 @@ button:hover {
         order: 2;
         margin-left: auto;
         margin-right: auto;
-        animation-delay: 1.5s;
+        animation-delay: 0.5s;
     }
     .intro_h4 {
         order: 3;
