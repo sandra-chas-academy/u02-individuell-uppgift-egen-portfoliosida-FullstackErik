@@ -106,7 +106,7 @@ body {
     margin: 0.5rem;
     opacity: 0;
     animation: fadeIn ease-in 0.5s forwards;
-    animation-delay: 0s;
+    animation-delay: 1s;
 }
 
 .intro_h2 {
@@ -117,7 +117,7 @@ body {
     font-size: 2rem;
     opacity: 0;
     animation: fadeIn ease-in 0.5s forwards;
-    animation-delay: 0.5s;
+    animation-delay: 1.5s;
 }
 
 .myName {
@@ -136,7 +136,7 @@ body {
     position: absolute;
     width: 0;
     animation: nameLine 1s forwards;
-    animation-delay: 0.5s;
+    animation-delay: 3.5s;
 }
 
 .intro_h3 {
@@ -154,7 +154,7 @@ body {
     width: 80%;
     opacity: 0;
     animation: fadeIn ease-in 0.5s forwards;
-    animation-delay: 0s;
+    animation-delay: 2s;
 }
 
 .intro_h4 {
@@ -166,7 +166,7 @@ body {
     font-size: 1.2rem;
     opacity: 0;
     animation: fadeIn ease-in 0.5s forwards;
-    animation-delay: 0.5s;
+    animation-delay: 2.5s;
 }
 
 .section_h2 {
@@ -188,7 +188,7 @@ body {
     gap: 8px;
     opacity: 0;
     animation: fadeIn ease-in 0.5s forwards;
-    animation-delay: 0s;
+    animation-delay: 3s;
 }
 
 .btns button {
@@ -384,6 +384,9 @@ button:hover {
     .modal {
         width: 580px;
     }
+    .card-container {
+        width: 273px;
+    }
 }
   /* md */
 @media (min-width: 768px) {
@@ -455,7 +458,7 @@ button:hover {
         order: 0;
         margin-left: auto;
         margin-right: auto;
-        animation-delay: 0s;
+        animation-delay: 1s;
     }
     .intro_h3 {
         order: 1;
@@ -467,7 +470,7 @@ button:hover {
         order: 2;
         margin-left: auto;
         margin-right: auto;
-        animation-delay: 0.5s;
+        animation-delay: 1.5s;
     }
     .intro_h4 {
         order: 3;
