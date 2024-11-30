@@ -48,9 +48,15 @@ body {
     animation: fadeIn ease-in 0.5s forwards;
     animation-delay: 0.5s;
 }
-/* måste bytas */
-#navbar a:hover {
-    background-color: aqua;
+
+.nav_list_item {
+    padding: 10px;
+
+}
+
+.nav_list_item:hover {
+    border-radius: 0 0 8px 8px;
+    background-color: #707070a4;
 }
 
 .nav_list-mobile {
@@ -393,6 +399,10 @@ button:hover {
     .container {
     max-width: 768px;
     }
+    #navbar {
+        padding-bottom: 1rem;
+        padding-top: 0;
+    }    
     #hamburger {
         display: none;
     }
