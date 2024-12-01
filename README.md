@@ -21,4 +21,4 @@ JSON kan även användas för att lagra och hämta data från localStorage i en 
 ### Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
 HyperTextTransferProtocol är ett protokoll som används för att skicka data över internet och hjälper datorerna förstå vilken data som ska skickas mellan te.x servrar och webbläsare. HTTP är mycket viktigt att ha koll på som frontendare då man ofta jobbar med sidor och appar som kommer skicka saker via protokollet som te.x användarnamn och lösenord och vet man inte alls hur det går till är det väldigt lätt att det kan bli en stor säkerhetsrisk. Man kommer även komma i kontakt med felkoder ofta och att veta vad dessa är i större utsträckning kommer att underlätta mycket, exempel på några är (200-299 successful, 400-499 error på klientsidan, 500-599 error på serversidan). HTTP är det som internet är byggt på men har med tiden blivit utdaterad och ett mycket vanligare protokoll idag är HTTPS(HTTPsecure), detta pga att HTTP skickar okrypterad data medans HTTPS skickar datan krypterad.
 
-# https://eriku02.netlify.app/
+# https://fullstackerikportfolio.netlify.app/
