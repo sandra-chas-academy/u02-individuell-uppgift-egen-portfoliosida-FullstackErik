@@ -57,7 +57,6 @@ modalBtns.forEach(btn => {
 
 //function so nav bar doesnt break upon resizing window
 function handleResize() {
-    console.log("running handleResize");
     dropDownList.style.display = "none";
 
     if (mobileMediaQuery.matches) {
@@ -73,7 +72,6 @@ function handleResize() {
 
 //function to open mobile navbar
 function showNav() {
-    console.log("running showNav");
     dropDownList.style.display = "block";
     hamburger.style.visibility = "hidden";
 
@@ -91,8 +89,6 @@ function showNav() {
 
 //function to close mobile navbar
 function closeNav() {
-    console.log("running closeNav");
-
     dropDownList.style.display = "none";
     hamburger.style.visibility = "visible";
 
@@ -107,7 +103,6 @@ function closeNav() {
 }
 
 async function getCV() {
-    console.log("running getCV");
     const url = "./cv.json";
     try {
         const response = await fetch(url);
@@ -123,7 +118,6 @@ async function getCV() {
 }
 
 async function writeCV() {
-    console.log("running writeCV");
     loader1.style.display = "block";
     abouth3.style.display = "none";
     const cv = await getCV();
@@ -154,7 +148,6 @@ async function writeCV() {
 }
 
 async function getRepos() {
-    console.log("running getRepos");
     const url = `https://api.github.com/users/FullstackErik/repos`;
     try {
         const response = await fetch(url);
@@ -171,7 +164,6 @@ async function getRepos() {
 }
 
 async function writeProjects() {
-    console.log("running writeProjects");
     loader2.style.display = "block";
     repoCardContainer.style.display = "none";
     const repos = await getRepos();
@@ -180,7 +172,6 @@ async function writeProjects() {
         const chosenRepos = [];
         repoCardContainer.style.boxShadow = "0px 0px 12px #ffffff";
         chosenRepos.push(repos[1], repos[5], repos[8]);
-        console.log(chosenRepos);
         repoCardContainer.innerHTML = chosenRepos.map(repo => `
             <div class="repos">
                 <a href="https://github.com/FullstackErik/${repo.name}">${repo.name}</a>
