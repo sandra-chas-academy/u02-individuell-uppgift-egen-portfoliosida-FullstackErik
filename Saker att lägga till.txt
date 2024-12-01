@@ -1,6 +1,0 @@
-
-
-hover på desktop nav bar (kommer ner från toppen med animation 
-samma färg som knapphover)
-
-fixa styling på navbar för desktop
