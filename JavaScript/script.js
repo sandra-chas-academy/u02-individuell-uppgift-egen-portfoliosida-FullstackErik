@@ -183,7 +183,7 @@ async function writeProjects() {
         console.log(chosenRepos);
         repoCardContainer.innerHTML = chosenRepos.map(repo => `
             <div class="repos">
-                <h3 class="repos-h3">${repo.name}</h3>
+                <a href="https://github.com/FullstackErik/${repo.name}">${repo.name}</a>
                 <img src="${repo.language === "CSS" ? "images/CSS.svg": "images/javascript.svg"}" alt="" class="repos-img">
                 <p class="repos-p">${repo.description}</p>
             </div>
