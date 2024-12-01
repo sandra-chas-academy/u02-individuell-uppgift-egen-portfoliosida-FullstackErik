@@ -62,10 +62,12 @@
     <div class="container modal" id="contactModal">
         <section class="modal_projects">
             <h2 class="section_h2">Contact me</h2>
-            <p class="modal_about_p">Hello visitor!<br>I'm Erik Andersson, a 32 year old student trying to change carrier and get into the world of tech!</p>
-            <p class="modal_about_p"> I'm currently enrolled in the class FJS24 studying Fullstack JavaScript at Chas Academy @ Globen and
-                live just outside of Stockholm.</p>
-            <p class="modal_about_p">Here is some of the programs I have experience with.</p>
+            <form class="contact-form">
+                <span class="input-icon-person"><img src="images/person.svg" alt="" class="icon-img"></span><input type="text" id="name" name="name" placeholder="Name" required>
+                <span class="input-icon-email"><img src="images/email.svg" alt="" class="icon-img"></span><input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="text" name="message" id="message" placeholder="Message">
+                <input type="submit" class="inputBtn">
+            </form>
         </section>
     </div>
 </body>
