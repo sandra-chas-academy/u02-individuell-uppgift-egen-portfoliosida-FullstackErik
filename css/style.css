@@ -13,9 +13,20 @@
     margin-right: auto;
     margin-bottom: 2rem;
 }
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrapper {
+    padding-bottom: 2.5rem;
+}
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: #181818;
 }
@@ -424,6 +435,49 @@ input {
 .inputBtn:hover {
     background: linear-gradient(141deg, rgba(0,214,249,0.8) 31%, rgb(245, 26, 214,0.8) 67%);
 }
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    height: 2.5rem;
+    padding: 5px;
+    background-color: #707070bd;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.myAdress {
+    display: none;
+}
+.myPhone {
+    position: relative;
+}
+.myPhone::before {
+    content: url("../images/phone.svg");
+    position: absolute;
+    left: -27px;
+    top: -2px;
+}
+.myMail {
+    position: relative;
+}
+.myMail::before {
+    content: url("../images/email\ footer.svg");
+    position: absolute;
+    left: -30px;
+    top: -2px;
+}
+.myAdress {
+    position: relative;
+}
+.myAdress::before {
+    content: url("../images/location.svg");
+    position: absolute;
+    left: -25px;
+    top: -2px;
+}
 /* xs */
 @media (min-width: 475px) {
     .container {
@@ -475,6 +529,9 @@ input {
     }
     .card-container {
         width: 273px;
+    }
+    .myAdress {
+        display: block;
     }
 }
   /* md */
