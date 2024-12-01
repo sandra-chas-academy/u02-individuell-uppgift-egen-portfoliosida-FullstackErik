@@ -1,0 +1,72 @@
+{   
+    "me": {
+        "age": 32,
+        "firstName": "Erik",
+        "lastName": "Andersson",
+        "middleName": "Leonard",
+        "location": "Gustavsberg",
+        "gender": "male",
+        "occupation": "student"
+    },
+    "educations": [
+        {
+            "school": "Hemmestaskolan",
+            "duration": "9 years",
+            "from": 1998,
+            "to": 2008,
+            "location": "Värmdö",
+            "kindOf": "Grundskola",
+            "grades": "⭐"
+        },
+        {
+            "school": "Värmdö Tekniska",
+            "duration": "3 years",
+            "from": 2008,
+            "to": 2011,
+            "location": "Värmdö",
+            "kindOf": "Gymnasial",
+            "grades": "10 av 10"
+        },
+        {
+            "school": "Chas Academy",
+            "duration": "2 years",
+            "from": 2024,
+            "to": 2026,
+            "location": "Globen",
+            "kindOf": "YH FullstackJavaScript",
+            "grades": "In progress"
+        }
+    ],
+    "jobs": [
+        {
+            "profession": "Plumber",
+            "duration": "1 year",
+            "company": "Roslagens VVS",
+            "contact": {
+                "name": "Robert",
+                "phone_number": 123456
+            }
+        },
+        {
+            "profession": "Driver",
+            "duration": "5 years",
+            "company": "Skarpnäcks åkeri",
+            "contact": {
+                "name": "Myself",
+                "phone_number": 123456
+            }
+        },
+        {
+            "profession": "Mover",
+            "duration": "6 years",
+            "company": "Rospiggen Express",
+            "contact": {
+                "name": "Yngve",
+                "phone_number": 123456
+            }
+        }
+    ],
+    "experiences": [
+        "driver's license", "security-courses", "handy", "heavy-lifts", "baby-developer" 
+    ]
+}
