@@ -34,7 +34,10 @@ body {
         transform: translateX(-50%);
     }
 }
-
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg)}
+}
 #navbar {
     padding: 1rem 0;
 }
@@ -260,7 +263,6 @@ button:hover {
     display: flex;
     gap: 20px;
     overflow: hidden;
-    box-shadow: 0px 0px 12px rgb(255, 255, 255);
     border-radius: 16px;
     scroll-snap-type: x mandatory
 }
@@ -340,7 +342,16 @@ button:hover {
     color: white;
     letter-spacing: 2px;
 }
-
+.loading {
+    width: 4rem;
+    height: 4rem;
+    border: solid 6px #00d6f9;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    animation: linear spin 0.7s infinite;
+    display: none;
+}
 /* xs */
 @media (min-width: 475px) {
     .container {

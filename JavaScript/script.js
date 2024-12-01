@@ -11,6 +11,7 @@ const repoCardContainer = document.querySelector(".card-container");
 const navLinks = document.querySelectorAll("a");
 const rightArrow = document.querySelector(".rightArrow");
 const leftArrow = document.querySelector(".leftArrow");
+const loader = document.querySelector(".loading");
 
 let closeModal;
 
@@ -165,16 +166,24 @@ async function getRepos() {
 
 async function writeProjects() {
     console.log("running writeProjects");
+    loader.style.display = "block";
+    repoCardContainer.style.display = "none";
     const repos = await getRepos();
 
-    const chosenRepos = [];
-    chosenRepos.push(repos[1], repos[5], repos[8])
-    console.log(chosenRepos)
-    repoCardContainer.innerHTML = chosenRepos.map(repo => `
-        <div class="repos">
-        <h3 class="repos-h3">${repo.name}</h3>
-        <img src="${repo.language === "CSS" ? "images/CSS.svg": "images/javascript.svg"}" alt="" class="repos-img">
-        <p class="repos-p">${repo.description}</p></div>
-        `
+    setTimeout(()=> {
+        loader.style.display = "none";
+        repoCardContainer.style.display = "flex";
+        const chosenRepos = [];
+        repoCardContainer.style.boxShadow = "0px 0px 12px #ffffff";
+        chosenRepos.push(repos[1], repos[5], repos[8]);
+        console.log(chosenRepos);
+        repoCardContainer.innerHTML = chosenRepos.map(repo => `
+            <div class="repos">
+                <h3 class="repos-h3">${repo.name}</h3>
+                <img src="${repo.language === "CSS" ? "images/CSS.svg": "images/javascript.svg"}" alt="" class="repos-img">
+                <p class="repos-p">${repo.description}</p>
+            </div>
+            `
     ).join("");
-}
+    }, 1500);
+} 
