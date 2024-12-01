@@ -1,77 +1,22 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Y0f03qEq)
-# Instruktioner
+# Sammanfattning:
 
-Denna uppgift går ut på att du bygga vidare uppgift u01 - Portfoliosida utifrån designskiss med Javascript. Du är nu fri att ändra till egen design / layout, samt eget innehåll. Det är dock viktigt att du behåller en sektion för CV ("About me") och en sektion med projekt ("Projects") eftersom du ska vidareutveckla sidan med Javascript på dessa sektioner. 
+Jag valde att göra om min portfoliosida från början då jag redan i slutet av förra uppgiften (u01) kände att jag inte riktigt var nöjd med sättet jag byggt och strukturerat html delen med tanke på hur mycket jag redan hade lärt mig under kursens gång. Planen var istället att bygga en hemsida från början som jag sedan under utbildningen ska kunna bygga vidare på och uppdatera allt eftersom jag lär mig mer och gör nya projekt. Jag ville att sidan skulle vara en singlepage sida då jag tycker att det ser snyggare ut och istället byta ut element mm. med JavaScript och känner att det inte kommer vara några problem då hemsidan i helhet är väldigt simpel. 
 
-## Vad du ska göra
+Jag gillar minimalistisk design och tycker att hemsidan ser ganska bra ut förutom några mindre delar som korten där mina projekt visas te.x vilket jag planerar att uppdatera och göra om i efterhand. Jag fastnade väldigt lätt på att göra design men närmre slutet så bestämde jag mig för att i förstahand göra sidan funktionell och därav hann jag inte uppdatera all design exakt så som jag ville.
 
-Du ska bygga vidare på  u01 - Portfoliosida utifrån designskiss med Javascript. och se till att du följer följande kravställningar: 
+Mina JS och CSS filer är också rätt stora vilket jag tror skulle kunna göra det svårt för någon annan än mig att ta över koden och uppdatera projektet vilket jag ser som en stor negativ sak som jag märkt att jag måste förbättra, det blir väldigt lätt att bara skriva kod när man är igång som man själv förstår men jag förstår även vikten av att strukturera koden så att den är lätt att läsa av någon annan, som te. x. lägga funktioner som hanterar samma saker i en enskild fil eller efter varandra istället för huller om buller i filen.
 
-### CV i en fil:
-Dina egna utbildningar och tidigare arbetsplatser ska nu ersätta "About me"-sidan. Ta med så mycket som möjligt att ditt "riktiga CV", men iallafall minst tre poster av varje.
-Vilka utbildningar du läst och vilka tidigare arbeten du haft ska ligga i en separat fil i JSON-format. Denna JSON-fil ska läsas och och generera ditt CV på den tidigare motsvarigheten av "About me" sidan.
+Annars så är jag nöjd med de interaktiva JS funktionerna och css animationer som gör att sidan känns väldigt levande och jag har lyckats med det jag har velat göra utan större problem med JS.
 
 
-### Interaktiva scripts:
-Din CV-sida ska innehålla minst två interaktiva JavaScript. Exempel kan vara en modal, slideshow, scroll-effekt, dölja/visa element, o.s.v
+### Vad kan man utveckla m.h.a av Javascript inom frontend?
 
-### Portfolio:
- Du publicerar minst två uppgifter / projekt från tidigare eller nuvarande studier / arbete inom HTML /CSS
+Man kan göra hemsidor interaktiva och manipulera dess HTML och CSS kod (DOMen). Hämta data från APIer och JSON filer och använda datan du får tillbaka på hemsidan direkt utan att skriva in allting eller specifika saker i förväg. Spel går även att utveckla för webbläsare. Animationer och övergångar, hemsidor som inte behövs laddas om för att uppdatera innehållet och mycket mer.
 
-### 👉  VG-krav
+### Vad är JSON och hur används det inom frontend?
 
-Din portfolio ska utökas så att den hämtar in publika projekt som finns i din egen Github via API. Den ska visa dessa projekt i din portfolio med namn och beskrivning.
+JSON står för JavaScript Object Notation och är ett sätt att lätt skicka och lagra data då det tar väldigt lite plats och är också väldigt enkelt för människor att läsa och förstå vad det innehåller. Det går främst till så att man frågar om data från ett API via JS fetch funktionen och sedan använder man datan man får tillbaka för att visa olika saker på en hemsida eller app så som te.x fråga om vädret i en specifik stad via ett väder API eller som vi gjorde i vårat grupprojekt och hämtade data från ett quizAPI för att sedan generera olika frågor och lägga till de i olika html element med hjälp av JS för att visa rätt och fel svar i appen. 
+JSON kan även användas för att lagra och hämta data från localStorage i en webbläsare eller att via vissa tjänster som NPM tillägget "json-server" skapa en tillfällig "fake" API för att underlätta en utvecklares arbete och testa koden innan en riktigt API behöver kallas eller skrivas.
 
-Du får gärna ha både dessa projekt och andra som genereras utifrån JSON-data om du känner för det, eller så ersätter du projekten så det bara är dina Github-projekt. Eventuellt kan du behöva komplettera datan från Github API med t.ex bilder ifrån JSON-datan.
-
-När hämtningen av projekten sker ska det finnas information om att projekten håller på att ladda in så att besökaren inte undrar varför sidan först är tom.
-
-
-
-### Tekniska krav:
-* Validerad med 0 fel på https://validator.w3.org
-* Inga errors i Console
-
-### Sammantfattning av projekt + teoretiska frågor
-
-1. Du sammanfattar ditt projekt i README.md och reflekterar kring styrkor och ev brister. Max 500 ord.
-2. Du svarar på dessa frågor (max 800 ord):
-
-Vad kan man utveckla m.h.a av Javascript inom frontend?
-Vad är JSON och hur används det inom frontend?
-Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
-
-
-## Kriterier för bedömning
-
-
-Icke Godkänd (IG), Godkänd (G) eller Väl Godkänd (VG)
-
-### Godkänd (G)
-Din portfolio-sida uppfyller alla krav enligt kravspecifikationen.
-Du visar att du kan utan allvarliga brister eller missar utveckla denna portfoliosida enligt kraven
-Du sammanfattar ditt projekt samt ger ett översiktligt och korrekt svar på frågorna
-
-
-### Väl Godkänd (VG)
-
-Din portfolio-sida uppfyller alla krav enligt kravspecifikationen samt VG-kraven
-Du uppvisar en mer avancerad förståelse för Git genom att jobba med en developer-branch som du sedan mergar i main
-Du visar att du kan utan brister, eller bara i sådan omfattning att de knappt märks eller påverkar slutresultatet
-
-
-### Börja uppgift / Din inlämning
-* Du börjar och lämnar in din uppgift genom Github Classroom på denna länk.
-* Återkoppling ges i Canvas
-
-
-
-
-
-
-
-
-
-
-
-# 
+### Vad är HTTP och varför bör man som frontendutvecklare ha kunskap om det och dess protokoll?
+HyperTextTransferProtocol är ett protokoll som används för att skicka data över internet och hjälper datorerna förstå vilken data som ska skickas mellan te.x servrar och webbläsare. HTTP är mycket viktigt att ha koll på som frontendare då man ofta jobbar med sidor och appar som kommer skicka saker via protokollet som te.x användarnamn och lösenord och vet man inte alls hur det går till är det väldigt lätt att det kan bli en stor säkerhetsrisk. Man kommer även komma i kontakt med felkoder ofta och att veta vad dessa är i större utsträckning kommer att underlätta mycket, exempel på några är (200-299 successful, 400-499 error på klientsidan, 500-599 error på serversidan). HTTP är det som internet är byggt på men har med tiden blivit utdaterad och ett mycket vanligare protokoll idag är HTTPS(HTTPsecure), detta pga att HTTP skickar okrypterad data medans HTTPS skickar datan krypterad.
