@@ -11,7 +11,8 @@ const repoCardContainer = document.querySelector(".card-container");
 const navLinks = document.querySelectorAll("a");
 const rightArrow = document.querySelector(".rightArrow");
 const leftArrow = document.querySelector(".leftArrow");
-const loader = document.querySelector(".loading");
+const loader1 = document.querySelector(".loading1");
+const loader2 = document.querySelector(".loading2");
 const abouth3 = document.querySelector(".modal_h3");
 
 let closeModal;
@@ -123,11 +124,11 @@ async function getCV() {
 
 async function writeCV() {
     console.log("running writeCV");
-    loader.style.display = "block";
+    loader1.style.display = "block";
     abouth3.style.display = "none";
     const cv = await getCV();
     const {jobs, educations} = cv;
-    loader.style.display = "none";
+    loader1.style.display = "none";
     abouth3.style.display = "block";
     cvJobs.innerHTML = jobs.map(job => `
                         <div class="about_upper">
@@ -185,9 +186,7 @@ async function getRepos() {
 //         console.log(chosenRepos);
 //         repoCardContainer.innerHTML = chosenRepos.map(repo => `
 //             <div class="repos">
-                
-//                     <a href="https://github.com/FullstackErik/${repo.name}">${repo.name}</a>
-                
+//                 <a href="https://github.com/FullstackErik/${repo.name}">${repo.name}</a>
 //                 <img src="${repo.language === "CSS" ? "images/CSS.svg": "images/javascript.svg"}" alt="" class="repos-img">
 //                 <p class="repos-p">${repo.description}</p>
 //             </div>
@@ -199,10 +198,10 @@ async function getRepos() {
 // Här är loading baren "korrekt" utan att vara framtvingad men fungerar bara ibland.
 async function writeProjects() {
     console.log("running writeProjects");
-    loader.style.display = "block";
+    loader2.style.display = "block";
     repoCardContainer.style.display = "none";
     const repos = await getRepos();
-        loader.style.display = "none";
+        loader2.style.display = "none";
         repoCardContainer.style.display = "flex";
         const chosenRepos = [];
         repoCardContainer.style.boxShadow = "0px 0px 12px #ffffff";

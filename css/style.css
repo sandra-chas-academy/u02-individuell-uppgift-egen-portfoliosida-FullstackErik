@@ -372,7 +372,18 @@ button:hover {
     letter-spacing: 2px;
 }
 
-.loading {
+.loading1 {
+    width: 4rem;
+    height: 4rem;
+    border: solid 6px #00d6f9;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    animation: linear spin 0.7s infinite;
+    display: none;
+}
+
+.loading2 {
     width: 4rem;
     height: 4rem;
     border: solid 6px #00d6f9;
