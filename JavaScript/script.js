@@ -170,32 +170,6 @@ async function getRepos() {
     }
 }
 
-
-// async function writeProjects() {
-//     console.log("running writeProjects");
-//     loader.style.display = "block";
-//     repoCardContainer.style.display = "none";
-//     const repos = await getRepos();
-
-//     setTimeout(()=> {
-//         loader.style.display = "none";
-//         repoCardContainer.style.display = "flex";
-//         const chosenRepos = [];
-//         repoCardContainer.style.boxShadow = "0px 0px 12px #ffffff";
-//         chosenRepos.push(repos[1], repos[5], repos[8]);
-//         console.log(chosenRepos);
-//         repoCardContainer.innerHTML = chosenRepos.map(repo => `
-//             <div class="repos">
-//                 <a href="https://github.com/FullstackErik/${repo.name}">${repo.name}</a>
-//                 <img src="${repo.language === "CSS" ? "images/CSS.svg": "images/javascript.svg"}" alt="" class="repos-img">
-//                 <p class="repos-p">${repo.description}</p>
-//             </div>
-//             `
-//     ).join("");
-//     }, 1000);
-// } 
-
-// Här är loading baren "korrekt" utan att vara framtvingad men fungerar bara ibland.
 async function writeProjects() {
     console.log("running writeProjects");
     loader2.style.display = "block";
